@@ -22,6 +22,19 @@ function startTabContent() {
                 appendWaiterPane.append(clonableRow);
             }
         });
+
+
+        allTabLinks.forEach((tabLink, tabId) => {
+            tabLink.addEventListener('click', function () {
+                setTimeout(() => {
+                    if (tabLink.classList.contains('w--current') && tabId == 2) {
+                        document.querySelector('.ill__o').click();
+                    } else {
+                        document.querySelector('.ill__c').click();
+                    }
+                });
+            }, 200);
+        });
     });
 
     setTimeout(() => {
