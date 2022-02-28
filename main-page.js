@@ -57,3 +57,13 @@ const observerOptions = {
 }
 const observer = new MutationObserver(tryToStartScript);
 observer.observe(targetNode, observerOptions);
+
+
+//копируем кнопку CTA
+setTimeout(() => {
+    
+    let clonableCtaButton = document.querySelector('.button-main--cta').cloneNode(true);
+    let clonableCtaButton__appendWaiter = document.querySelector('.tabs-content');
+    
+    clonableCtaButton__appendWaiter.append(clonableCtaButton);
+}, 1000);
